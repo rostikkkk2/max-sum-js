@@ -1,17 +1,16 @@
-function sum(){
-  arr = [12, 10, 7, 33];
-  var res = 0;
+function sum(nums){
+  var max = 0;
   var summa;
   var i = 0;
 
-  while (i < arr.length) {
-    summa = arr[i] + arr[i + 1];
-    if (summa > res) {
-      res = summa;
+  while (i < nums.length) {
+    summa = nums[i] + nums[i + 1];
+    if (summa > max) {
+      max = summa;
     }
     i++;
   }
-  return res;
+  return max;
 }
 
-alert(sum());
+alert(sum([4, 1, 20, 2]));
